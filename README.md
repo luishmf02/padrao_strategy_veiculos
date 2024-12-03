@@ -25,6 +25,7 @@ class Veiculo:
             return "Navegando!"
         else:
             return "Movimento não reconhecido!"
+```
 
 ### Código **Com Strategy**
 Com o padrão Strategy, cada comportamento (voar, dirigir, navegar) é encapsulado em uma classe específica. Isso permite:
@@ -33,6 +34,7 @@ Com o padrão Strategy, cada comportamento (voar, dirigir, navegar) é encapsula
 - Trocar o comportamento dinamicamente, sem modificar o código existente.
 - Melhorar a modularidade e a testabilidade, já que cada estratégia é independente.
 
+```python
 class Voar(EstrategiaMovimento):
     def mover(self, nome):
         return f"{nome} está voando!"
@@ -40,6 +42,7 @@ class Voar(EstrategiaMovimento):
 class VeiculoComStrategy:
     def __init__(self, nome, estrategia_movimento):
         self.estrategia_movimento = estrategia_movimento
+```
 
 O padrão Strategy separa responsabilidades, promove reutilização e evita a necessidade de alterações repetitivas em classes existentes, algo que é problemático na abordagem sem Strategy.
 
